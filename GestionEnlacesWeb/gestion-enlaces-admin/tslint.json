@@ -1,0 +1,99 @@
+{
+  "extends": ["tslint-react"],
+  "rules": {
+    "align": [
+      false,
+      "parameters",
+      "arguments",
+      "statements"
+    ],
+    "ban": false,
+    "class-name": false,
+    "comment-format": [
+      false,
+      "check-space"
+    ],
+    "curly": true,
+    "eofline": false,
+    "forin": false,
+    "indent": [false, "spaces"],
+    "interface-name": [false, "never-prefix"],
+    "jsdoc-format": true,
+    "jsx-no-lambda": false,
+    "jsx-no-multiline-js": false,
+    "label-position": false,
+    "max-line-length": [false, 120],
+    "member-ordering": [
+      false,
+      "public-before-private",
+      "static-before-instance",
+      "variables-before-functions"
+    ],
+    "no-any": false,
+    "no-arg": false,
+    "no-bitwise": false,
+    "no-console": [
+      false,
+      "log",
+      "error",
+      "debug",
+      "info",
+      "time",
+      "timeEnd",
+      "trace"
+    ],
+    "no-consecutive-blank-lines": false,
+    "no-construct": true,
+    "no-debugger": false,
+    "no-duplicate-variable": true,
+    "no-empty": false,
+    "no-eval": true,
+    "no-shadowed-variable": false,
+    "no-string-literal": false,
+    "no-switch-case-fall-through": true,
+    "no-trailing-whitespace": false,
+    "no-unused-expression": false,
+    "no-use-before-declare": false,
+    "one-line": [
+      false
+    ],
+    "quotemark": [false, "single", "jsx-double"],
+    "radix": false,
+    "semicolon": [false, "always"],
+    "switch-default": false,
+
+    "trailing-comma": [false],
+
+    "triple-equals": [false, "allow-null-check"],
+    "typedef": [
+      false,
+      "parameter",
+      "property-declaration"
+    ],
+    "typedef-whitespace": [
+      false,
+      {
+        "call-signature": "nospace",
+        "index-signature": "nospace",
+        "parameter": "nospace",
+        "property-declaration": "nospace",
+        "variable-declaration": "nospace"
+      }
+    ],
+    "jsx-boolean-value": false,
+    "variable-name": [true, "ban-keywords", "check-format", "allow-leading-underscore", "allow-pascal-case"],
+    "whitespace": [
+      false,
+      "check-branch",
+      "check-decl",
+      "check-module",
+      "check-operator",
+      "check-separator",
+      "check-type",
+      "check-typecast"
+    ]
+  },
+  "overrides": [{
+    "excludedFiles": "*.js"
+  }]
+}

@@ -1,0 +1,3292 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins";
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: none;
+}
+
+.principal {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 1rem;
+  min-height: 100vh;
+  background-color: #f5f5f5;
+}
+
+.organizacionPrincipal {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+}
+
+.organizacionSecundaria {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+.columnaDestacados {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin-left: 1rem;
+  margin-top: 0.5rem;
+}
+
+.botonNuevo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0.6rem;
+  cursor: pointer;
+
+  color: white;
+  background-color: rgb(239, 46, 75);
+
+  transition: 0.3s ease-out;
+}
+
+.botonNuevo:hover {
+  background-color: rgb(245, 68, 91);
+}
+
+.botonNuevo .MuiSvgIcon-root {
+  font-size: 1.6rem;
+}
+
+.botonNuevo span {
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 1rem;
+  background-color: transparent;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* MENÚ */
+
+.scrollFix {
+  position: fixed;
+  top: 0;
+  z-index: 3;
+
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(255, 255, 255);
+  transition: ease-in top 0.3s;
+}
+
+.scroll {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.801);
+}
+
+.menuPublic {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+
+  height: 3rem;
+
+  background-color: rgba(255, 255, 255, 0.904);
+
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  z-index: 3;
+}
+
+.menuPublic .logout {
+  margin-left: 2rem;
+}
+
+.menuPublic .idioma-drop {
+  font-size: 1.1rem;
+  margin-right: 2rem;
+}
+
+.menuPublic .cajaLogo {
+  margin-top: 0.4rem;
+}
+
+.logoResponsive {
+  display: none;
+  position: fixed;
+  z-index: 4;
+
+  float: left;
+
+  margin-top: 0.6rem;
+  margin-left: 2rem;
+}
+
+.menu {
+  width: 100%;
+
+  background-color: rgba(255, 255, 255, 0.904);
+
+  position: absolute;
+
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  z-index: 3;
+
+  height: 3rem;
+}
+
+.menu li {
+  display: inline;
+  font-size: 1rem;
+  font-weight: 600;
+  list-style-type: none;
+}
+
+.menuResponsive img {
+  display: none;
+}
+
+.menuResponsive {
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  position: sticky;
+  top: 0;
+  z-index: 3;
+}
+
+.iconosResponsive {
+  display: none;
+}
+
+.menuResponsive li {
+  float: inline-end;
+  display: block;
+  padding: 1rem 0;
+}
+
+.menuResponsive [role="button"] {
+  float: right;
+  width: 20%;
+  padding-top: 0.5rem;
+}
+
+.menuResponsive .idioma-drop {
+  font-size: 1.2rem;
+}
+
+.caja-navBar {
+  width: 65%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding-right: 1rem;
+  padding-left: 2rem;
+
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.navBar {
+  list-style: none;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.menuResponsive .navBar {
+  margin-bottom: 0.5rem;
+}
+
+.menu .cajaLogo {
+  float: left;
+  height: 50%;
+  width: 37%;
+  margin-bottom: 0px;
+  padding-top: 0.7rem;
+}
+
+.menu .cajaTabs {
+  float: right;
+  height: 50%;
+  width: 57%;
+  margin-bottom: 0px;
+  padding-top: 0.4rem;
+  text-align: center;
+}
+
+.menu .cajaLogout {
+  float: right;
+  height: 50%;
+  width: 30%;
+  margin-bottom: 0px;
+  padding-top: 0.4rem;
+}
+
+.cajaLan-Log {
+  float: right;
+  height: 50%;
+  margin-bottom: 0px;
+}
+
+/* desplegable idiomas*/
+
+.idioma-drop {
+  top: 0rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: rgb(90, 90, 90);
+  text-align: center;
+  border-radius: 0;
+}
+
+.idioma-drop .css-tlfecz-indicatorContainer {
+  color: rgb(90, 90, 90);
+}
+
+.idioma-drop .css-zk88xw-singleValue {
+  color: rgb(90, 90, 90);
+}
+
+.idioma-drop .css-1laao21-a11yText {
+  cursor: pointer;
+  border-width: 0;
+  border: none;
+  border-radius: 0;
+  border-color: none;
+  box-shadow: none;
+  background-color: none;
+}
+
+.logo {
+  clear: both;
+  height: 100%;
+  width: 8rem;
+  cursor: pointer;
+}
+
+li {
+  clear: both;
+  height: 100%;
+}
+
+.menu .navBar li {
+  padding: 0.5rem 2rem;
+  cursor: pointer;
+  color: rgb(90, 90, 90);
+  text-align: center;
+  line-height: 1;
+
+  margin: 0 0.2rem;
+  transition: 0.3s ease-out;
+}
+
+.menu .navBar li:hover {
+  color: #71c6c6;
+  font-weight: 600;
+}
+
+.menuResponsive .navBar li {
+  padding: 1rem 2rem;
+  cursor: pointer;
+  color: rgb(100, 100, 100);
+  text-align: center;
+  line-height: 1;
+
+  margin: 0 0.2rem;
+  transition: 0.3s ease-out;
+}
+
+.menuResponsive .navBar li:hover {
+  color: #23ada9;
+  font-weight: 600;
+}
+
+.menuResponsive .navBar li:after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 3px;
+  background: rgba(113, 198, 198, 0.884);
+  transition: width 0.3s;
+  margin-top: 0.5rem;
+}
+
+.menuResponsive .navBar li:hover::after {
+  width: 100%;
+}
+
+.menuResponsive .logout {
+  margin: 0.5rem 0rem;
+  cursor: pointer;
+  color: rgb(100, 100, 100);
+  transition: 0.3s ease-out;
+  font-size: 1.8rem !important;
+}
+
+.menuResponsive .logout:hover {
+  color: #71c6c6;
+}
+
+.menuResponsive .css-7vrotk-container {
+  width: 71px;
+}
+
+.logout {
+  clear: both;
+  height: 100%;
+  cursor: pointer;
+  color: rgb(90, 90, 90);
+  transition: 0.3s ease-out;
+  font-size: 1.7rem !important;
+  display: inline-block;
+}
+
+.logout:hover {
+  color: #71c6c6;
+}
+
+.logout .svg-inline--fa.fa-w-16 {
+  width: 0.8em;
+  padding-top: 0.4rem;
+}
+
+.iconoUser .svg-inline--fa {
+  font-size: 1.1rem;
+}
+
+/* ENLACES */
+
+.ListaEnlaces {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: white;
+}
+
+.nuevoEnlace {
+  width: auto;
+  min-width: 20%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: white;
+  background-color: rgb(239, 46, 75);
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+  margin-bottom: 0.5rem;
+}
+.nuevoEnlace span {
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 1rem 2rem;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+.nuevoEnlace:hover {
+  background-color: rgb(245, 68, 91);
+}
+
+.cajaLista {
+  width: 100%;
+}
+
+.cajaLista .MuiList-padding {
+  padding: 0.5rem;
+}
+
+.cajaListaEnlaces {
+  width: 100%;
+}
+
+.cajaListaEnlaces .MuiList-padding {
+  padding: 0.5rem;
+}
+
+.organizacionEnlace {
+  display: flex;
+  justify-content: space-between;
+}
+
+.organizacionEnlace .MuiListItemAvatar-root {
+  display: flex;
+  align-self: flex-start;
+  margin-top: 0.3rem;
+}
+
+.infoEnlace {
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.infoEnlacePublico {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.titleName {
+  font-weight: 600;
+  font-size: 14pt;
+  color: rgb(49, 49, 49);
+  text-align: justify;
+}
+
+.titleNameDestacados {
+  font-size: 1rem;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.iconoDestacados {
+  color: #7b8585;
+}
+
+.nameUrl {
+  font-weight: 400;
+  font-size: 12pt;
+  color: rgba(49, 49, 49, 0.788);
+}
+
+.categorias {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+
+.boxCategoria {
+  max-width: 100%;
+}
+
+.boxTag {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.masTags {
+  background-color: rgba(146, 239, 115, 0);
+  color: rgb(54, 54, 54);
+}
+
+.masTags.MuiSvgIcon-root {
+  height: auto;
+}
+
+.nameCategoria {
+  display: flex;
+  font-size: 1rem;
+  color: #71c6c6;
+  font-weight: 500;
+  background-color: transparent;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+  padding: 0.3rem 1rem;
+  border: #bdbdbd solid 1px;
+  border-radius: 2rem;
+}
+
+.categoria {
+  padding-right: 0.3rem;
+}
+
+.nameTag {
+  font-size: 1rem;
+  color: #92ef73;
+  font-weight: 500;
+  background-color: transparent;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  padding: 0.3rem 1rem;
+  border: #bdbdbd solid 1px;
+  border-radius: 2rem;
+}
+
+.MuiTouchRipple-root {
+  transition: none !important;
+}
+
+.popupEliminar .MuiTypography-body1 {
+  font-size: 1.1rem;
+  padding: 1.5rem 2rem 0.5rem 2rem;
+}
+
+.popupEliminar .MuiDialogActions-spacing > :not(:first-child) {
+  margin-left: 1rem;
+}
+
+.confirmacionEliminar {
+  color: white;
+  margin-left: 1rem;
+  margin-bottom: 0.7rem;
+  color: white;
+  background-color: #71c6c6;
+  border: solid 1px #71c6c6;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.5rem 2.5rem;
+  margin-left: 1rem;
+  border-radius: 22px;
+  cursor: pointer;
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+}
+
+.confirmacionEliminar:hover {
+  background-color: #23ada9;
+  color: white;
+}
+
+.guardarEnlaceLista {
+  color: white;
+  background-color: #71c6c6;
+  border: none;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.5rem 2.5rem;
+  margin-left: 1rem;
+  margin-bottom: 0.7rem;
+  border-radius: 22px;
+  cursor: pointer;
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+}
+
+.guardarEnlaceLista:hover {
+  background-color: #23ada9;
+  color: white;
+}
+
+.popupListas {
+  margin-left: 3rem;
+  margin-right: 3rem;
+}
+
+.popupListas .MuiDialogTitle-root {
+  padding: 1.5rem;
+}
+
+.popupListas .MuiDivider-inset {
+  margin-left: 1rem;
+}
+
+.popupListas .MuiList-padding {
+  padding: 0px;
+}
+
+.popupListas .MuiListItem-button:hover {
+  border-right: solid 3px #92ef73;
+  background-color: transparent;
+}
+
+.popupListas .MuiCheckbox-colorSecondary.Mui-checked {
+  color: #92ef73;
+  border-radius: 50%;
+}
+
+.popupListas .MuiCheckbox-root {
+  color: #92ef73;
+}
+
+.popupListas .MuiListItem-root.Mui-selected {
+  background-color: #eeffe9;
+}
+
+.popupListas .MuiListItem-root.Mui-selected:hover {
+  background-color: #eeffe9;
+}
+.popupListas .MuiCheckbox-colorSecondary.Mui-checked:hover {
+  background-color: transparent;
+}
+.popupListas .MuiIconButton-colorSecondary:hover {
+  background-color: transparent;
+}
+
+.categoriasListas {
+  display: flex;
+  font-size: 0.9rem;
+  line-height: 1rem;
+  color: white;
+  background-color: #7b85856b;
+  padding: 0.4rem 0.8rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.confirmacionNo {
+  font-size: 1rem;
+  color: rgba(0, 0, 0, 0.7);
+  margin-bottom: 0.7rem;
+  padding: 0.5rem 2.5rem;
+  font-weight: 600;
+  border-radius: 22px;
+  border: 1px solid rgba(0, 0, 0, 0.7);
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.dialogoEliminar .MuiDialog-paperWidthSm {
+  max-width: 715px;
+  padding: 1rem;
+}
+
+.dialogoEliminar .MuiTypography-colorTextSecondary {
+  color: rgba(0, 0, 0, 0.9);
+  text-align: center;
+}
+
+.dialogoEliminar .MuiDialogActions-root {
+  justify-content: center;
+}
+
+.popupEliminar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Puntuación */
+
+.cajaPuntuacion {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  align-self: center;
+
+  padding: 0.5rem 0.5rem 0.6rem 0.5rem;
+}
+
+.cajaHeart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.puntuacion {
+  font-size: 1.5rem !important;
+  color: #ef2e4a;
+}
+
+.sinPuntuacion {
+  font-size: 1.5rem !important;
+  color: #e4e4e4;
+}
+
+.favorito {
+  font-size: 1.2rem !important;
+  display: block !important;
+  margin-left: 0.3em;
+}
+
+.puntua {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ef2e4a;
+  border: 2px solid #ef2e4a;
+  border-radius: 20px;
+  padding: 0.2rem 1rem;
+
+  transition: 0.3s ease-in;
+}
+
+.puntua:hover {
+  color: white;
+  border: 2px solid #ef2e4a;
+  background-color: #ef2e4a;
+}
+
+.nVotos {
+  font-size: 0.7rem;
+  color: grey;
+  padding-right: 0.5rem;
+}
+
+.nRating {
+  padding-left: 0.5rem;
+  color: #ef2e4a;
+}
+
+.rating {
+  margin-top: 0.5rem;
+}
+
+.rating .MuiPaper-rounded {
+  border-radius: 0px;
+}
+
+.popupRating .MuiDialogTitle-root {
+  padding-bottom: 0.2rem;
+}
+
+.popupRating .MuiDialog-paperWidthXs {
+  max-width: 535px;
+}
+
+.cajaRating {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.cajaRating .MuiRating-root {
+  font-size: 2.5rem;
+  color: #ef2e4a;
+}
+
+.MuiPaper-rounded {
+  border-radius: 0 !important;
+}
+
+.MuiTypography-h6 {
+  font-family: "Poppins" !important;
+}
+
+.enviarRating {
+  color: white;
+  background-color: #71c6c6;
+  border: none;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.5rem 2.5rem;
+  margin-left: 1rem;
+  margin-bottom: 0.7rem;
+  border-radius: 22px;
+  cursor: pointer;
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+}
+
+.enviarRating:hover {
+  background-color: #23ada9;
+  color: white;
+}
+
+/* Opciones Listas */
+.divider-popup-listitem {
+  margin-left: 0;
+}
+
+.margin-listitem {
+  width: 7%;
+  color: #7b8585;
+}
+
+.cajaIcono {
+  width: 25%;
+  display: flex;
+  justify-content: flex-end;
+  align-self: flex-start;
+}
+
+.iconos {
+  width: auto;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.icono {
+  margin: 0.5em;
+  font-size: large;
+  color: rgba(49, 49, 49, 0.534);
+
+  transform: scale(1.3);
+  transition: 0.7s;
+}
+
+.icono:hover {
+  color: #ef2e4a;
+}
+
+/* BÚSQUEDA */
+
+.portada {
+  max-width: 100%;
+  width: 100%;
+  overflow: hidden;
+  height: 20rem;
+}
+
+.portada img {
+  width: 100%;
+  display: block;
+}
+
+.busqueda {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.busquedaSimple {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+
+  margin-top: 0.5rem;
+}
+
+.search-container {
+  display: flex;
+  width: 100%;
+  position: relative;
+  left: 0;
+  right: 0;
+}
+
+.buscar {
+  width: 100%;
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 0.8rem 1rem 0.8rem 2rem;
+  border: solid #71c6c6 3px;
+  outline: none;
+  color: #7b8585;
+}
+
+input::placeholder {
+  font-weight: 400;
+  font-size: 1rem;
+
+  color: rgb(167, 167, 167);
+}
+
+.lupa {
+  position: absolute;
+  float: right;
+  right: 1.8rem;
+  top: 1.3rem;
+
+  cursor: pointer;
+  text-decoration: none;
+  color: #71c6c6;
+}
+
+.lupa.svg-inline--fa.fa-w-16 {
+  transform: scale(1.4);
+}
+
+.search-container .MuiSvgIcon-root {
+  font-size: 2.7rem !important;
+}
+
+/* DESTACADOS */
+
+.cajaDestacados {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+
+  color: rgb(49, 49, 49);
+}
+
+.cajaDestacados h3 {
+  text-align: center;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.cajaDestacados .MuiListItemAvatar-root {
+  min-width: 35px;
+}
+
+.cajaDestacados .MuiListItem-root {
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+}
+
+.ultimosEnlaces,
+.enlacesPatrocinados {
+  background-color: white;
+  padding: 1.1rem 1.5rem 0.5rem 1.5rem;
+  margin-bottom: 0.7rem;
+}
+
+.masVotados {
+  background-color: white;
+  padding: 1.1rem 1.5rem 0.5rem 1.5rem;
+}
+
+/* BÚSQUEDA AVANZADA*/
+
+.busquedaAvanzada {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+
+  background-color: #71c6c6;
+}
+
+.botonDesplegar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  background-color: #71c6c6;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.cajaDesplegada {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 1.5rem;
+}
+
+.CTAvanzado {
+  display: flex;
+  width: 90%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  align-items: center;
+
+  background-color: transparent;
+  color: white;
+  border: none;
+  cursor: pointer;
+
+  padding-top: 1rem;
+  padding-bottom: 0.9rem;
+}
+
+.CTAvanzado h2 {
+  display: flex;
+  width: 90%;
+  justify-content: flex-start;
+  margin: 0;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.ampliar {
+  width: 20%;
+  display: flex;
+  justify-content: flex-end;
+  align-content: center;
+}
+
+/* Opciones búsqueda */
+
+.cajaOpcionesAvanzadas {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.fila {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.cajaOption {
+  width: 50%;
+  height: fit-content;
+  margin: 0.3rem 0.5rem;
+
+  display: flex;
+  justify-content: center;
+}
+
+.cajaOption .MuiSvgIcon-root {
+  font-size: 1.5rem !important;
+}
+
+.cajaOption .MuiSvgIcon-fontSizeSmall {
+  font-size: 1.25rem !important;
+}
+
+#combo-option {
+  width: 100%;
+}
+
+.opciones {
+  background-color: #23ada9;
+  color: white !important;
+}
+
+.cajaOption .MuiAutocomplete-root {
+  width: 100%;
+}
+
+.cajaOption .MuiInputBase-root {
+  color: white !important;
+}
+
+.cajaOption .MuiFormLabel-root {
+  color: white !important;
+  font-family: "Poppins" !important;
+}
+
+.cajaOption .MuiInputBase-root {
+  font-family: "Poppins" !important;
+}
+
+.cajaOption .MuiOutlinedInput-notchedOutline {
+  border-color: #23ada9 !important;
+}
+
+.cajaOption .MuiAutocomplete-input {
+  padding: 0.5rem 0.1rem !important;
+}
+
+.cajaOption .MuiAutocomplete-inputRoot {
+  padding: 0.63rem !important;
+}
+
+.cajaOption .MuiOutlinedInput-root:hover {
+  border-color: rgba(113, 198, 198, 0) !important;
+}
+
+.cajaOption .MuiAutocomplete-popupIndicator {
+  margin-right: 0 !important;
+  margin-left: 0.5rem !important;
+}
+
+.cajaOption .MuiButtonBase-root {
+  background-color: white !important;
+}
+
+.cajaOption .MuiButtonBase-root:hover {
+  background-color: #71c6c6 !important;
+}
+
+.cajaOption .MuiIconButton-root {
+  color: #23ada9 !important;
+}
+
+.cajaOption .MuiIconButton-root:hover {
+  background-color: #71c6c6 !important;
+}
+
+/* tags */
+
+.cajaTags {
+  width: 100%;
+  margin: 0.3rem 0.5rem 0rem 0.5rem;
+  display: flex;
+  justify-content: flex-start;
+  user-select: none;
+}
+
+.tags {
+  width: 100%;
+}
+
+/* empieza tags */
+.tagsBusqueda {
+  width: 100%;
+  background-color: #23ada9;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.tagsBusqueda .MuiChip-root {
+  border-radius: 0px;
+  color: white;
+  background-color: #92ef73;
+  font-size: 1.1rem;
+}
+
+.tagsBusqueda .MuiOutlinedInput-root {
+  border-radius: 0px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+
+.tagsBusqueda .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
+  border-color: #23ada9;
+}
+
+.tagsBusqueda .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-color: #23ada9 !important;
+  border-width: 0 !important;
+}
+
+.tagsBusqueda .MuiOutlinedInput-notchedOutline {
+  border-color: #23ada9;
+  border-width: 0;
+}
+
+.tagsBusqueda .PrivateNotchedOutline-root-434 {
+  border-width: 0;
+}
+
+.tagsBusqueda .MuiFormLabel-root {
+  color: white;
+  letter-spacing: 0;
+  font-family: "Poppins";
+}
+
+.tagsBusqueda .MuiFormLabel-root.Mui-focused {
+  color: white;
+}
+
+.tagsBusqueda .MuiInputBase-input {
+  color: white;
+}
+
+.tagsBusqueda .MuiChip-deleteIcon {
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.tagsBusqueda .MuiChip-deleteIcon:hover {
+  color: white;
+}
+
+.tagsBusqueda .MuiFormControl-fullWidth {
+  width: 100%;
+}
+
+.tagsBusqueda .MuiAutocomplete-popupIndicator {
+  color: #23ada9;
+  background-color: white;
+
+  margin-right: 0 !important;
+  margin-left: 0.5rem !important;
+}
+
+.tagsBusqueda .MuiAutocomplete-popupIndicator:hover {
+  color: #23ada9;
+  background-color: #71c6c6;
+}
+
+.tagsBusqueda .MuiAutocomplete-clearIndicator {
+  color: #23ada9;
+  background-color: white;
+}
+
+.tagsBusqueda .MuiAutocomplete-clearIndicator:hover {
+  color: #23ada9;
+  background-color: #71c6c6;
+}
+
+/* tagas pública */
+
+.cajaTagsPublic {
+  width: 50%;
+  margin: 0.3rem 0.5rem;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.cajaTagsPublic .kDKDO {
+  background-color: #92ef73 !important;
+  color: white !important;
+  border: none !important;
+  height: auto !important;
+  padding: 0.3rem 0.4rem 0.3rem 0.8rem !important;
+}
+
+.cajaTagsPublic .jwsqoF {
+  width: 100% !important;
+  border: none !important;
+  border-radius: 0 !important;
+  padding: 0.5em !important;
+}
+
+.cajaTagsPublic .jwsqoF input {
+  color: white !important;
+}
+
+.cajaTagsPublic .jwsqoF.focused {
+  border-color: #71c6c6 !important;
+}
+
+.cajaTagsPublic .jwsqoF:hover {
+  border-color: rgba(113, 198, 198, 0) !important;
+}
+
+.cajaTagsPublic .kZZAKS {
+  line-height: 2 !important;
+  color: white !important;
+}
+
+/* botones búsqueda avanzada */
+
+.cajaBuscarAvanzado {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.botonBuscar {
+  color: #71c6c6;
+  background-color: white;
+
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 2rem;
+  cursor: pointer;
+
+  padding: 0rem 2.2rem;
+  margin-right: 1rem;
+
+  transition: 0.3s ease-out;
+}
+
+.botonBuscar:hover {
+  color: #23ada9;
+}
+
+.botonEliminar {
+  color: white;
+  background-color: transparent;
+
+  font-size: 16px;
+  font-weight: 400;
+  border: none;
+  cursor: pointer;
+
+  padding: 0.7rem 2.2rem;
+  margin-right: 1rem;
+
+  text-decoration-line: underline;
+}
+
+/* LOGIN */
+
+.CajaLogin {
+  font-family: "Poppins" !important;
+  position: relative;
+}
+
+.CajaLogin .MuiGrid-item {
+  background-color: #71c6c6 !important;
+}
+
+.logoLogin {
+  width: 12rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.Login h1 {
+  font-family: "Poppins" !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+.Login .MuiTypography-h5 {
+  font-size: 1.6rem;
+}
+
+.footerLogin {
+  color: #ffffff;
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+}
+
+.linkAlLogin {
+  background-color: #71c6c6 !important;
+  font-size: 1.1rem !important;
+  font-weight: 600 !important;
+  color: white !important;
+  padding: .5rem 0 !important;
+  border-radius: 22px !important;
+}
+
+.inputRegister {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(fit-content, 1fr);
+  column-gap: 0.5rem;
+}
+
+.inputLogin label {
+  font-family: "Poppins" !important;
+}
+
+.MuiFilledInput-root {
+  font-family: "Poppins" !important;
+}
+
+.MuiTypography-body1 {
+  font-family: "Poppins" !important;
+}
+
+.makeStyles-avatar-4 {
+  background-color: rgb(179, 179, 179) !important;
+  margin-bottom: 2rem !important;
+}
+
+.MuiPaper-root h1 {
+  color: #23ada9 !important;
+  font-family: "Poppins" !important;
+}
+
+.inputLogin input {
+  background-color: white !important;
+  color: black !important;
+}
+
+.MuiFilledInput-underline:after {
+  border-bottom: 2px solid #71c6c6 !important;
+}
+
+/* .MuiFilledInput-underline:hover {
+  border-bottom: 1px solid #71c6c6 !important;
+} */
+
+.MuiFilledInput-underline:before {
+  border-bottom: 1px solid #71c6c6 !important;
+}
+
+.inputLogin label {
+  color: rgba(0, 0, 0, 0.54) !important;
+}
+
+.checkboxLogin {
+  display: flex;
+  justify-content: flex-start;
+  font-family: "Poppins" !important;
+}
+
+.checkboxLogin .MuiIconButton-root {
+  color: #71c6c6 !important;
+}
+
+.checkboxLogin .MuiIconButton-root:hover {
+  background-color: white !important;
+}
+
+.botonEntrarLanding {
+  display: flex;
+  justify-content: flex-end;
+  flex-grow: 1;
+}
+
+.botonEntrarLanding button {
+  width: 20%;
+  background-color: #71c6c6 !important;
+  border-radius: 22px;
+  box-shadow: none;
+}
+
+.botonEntrar {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.botonEntrar button {
+  width: 35%;
+  display: flex;
+  justify-content: center;
+  background-color: #71c6c6 !important;
+  border-radius: 22px;
+  padding: 0.7rem 2.2rem;
+  font-size: 1rem;
+  font-family: "Poppins" !important;
+}
+
+.botonEntrar button:hover, .botonEntrarLanding button:hover{
+  background-color: #23ada9 !important;
+  box-shadow: none !important;
+}
+
+.botonEntrar .MuiButton-contained {
+  box-shadow: none;
+}
+
+/* Registro */
+.botonEntrarContainer {
+  display: block !important;
+  padding-top: 0 !important;
+}
+
+.botonesRegistrar {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+.botonesRegistrar button {
+  width: 100%;
+  background-color: #71c6c6 !important;
+  border-radius: 22px;
+  padding: 0.7rem 2.2rem;
+  font-size: 1rem;
+  font-family: "Poppins" !important;
+  box-shadow: none;
+}
+
+.botonesRegistrar button:hover {
+  box-shadow: none;
+}
+
+.botonesRegistrar button:first-child {
+  background-color: #ffffff !important;
+  color: #71c6c6 !important;
+  border: #71c6c6 2px solid;
+}
+
+.botonesRegistrar button:last-child {
+  grid-column: 2 / 4;
+}
+/* LOGIN directo */
+.accesoDirecto a {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+
+/* footer */
+
+footer {
+  padding: 3rem 2rem;
+  background-color: #e4e4e4;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* EDITAR ENLACE */
+
+.enlacesAltaEditar {
+  background-color: #f5f5f5;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* width: 100%;
+  height: 100vh;
+  background-image: url(/images/pediatriaEditar.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center; */
+}
+
+.editarEnlace {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+  color: rgb(49, 49, 49);
+}
+
+.cajaModificarEnlace {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+
+  background-color: white;
+  margin-top: 4rem;
+  margin-bottom: 1rem;
+  padding: 2rem 2rem 2.5rem 2rem;
+}
+
+.modificarEnlace {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+}
+
+.modificarEnlace h2 {
+  color: #71c6c6;
+  font-weight: 500;
+  font-size: 1.8rem;
+}
+
+.contenidoModificable {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+}
+
+.cajaMedicoGuardar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.botonesEditar {
+  width: 75%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.botonVolver {
+  color: #ef2e4a;
+  background-color: transparent;
+  font-size: 1rem;
+  font-weight: 500;
+
+  padding: 0.5rem 2.5rem;
+  border-radius: 22px;
+  border: 1px solid #ef2e4a;
+  cursor: pointer;
+
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+}
+
+.botonVolver:hover {
+  color: white;
+  background-color: #ef2e4a;
+}
+
+.botonModificar {
+  color: #23ada9;
+  background-color: transparent;
+  border: 1px solid #71c6c6;
+  font-size: 1rem;
+  font-weight: 500;
+
+  padding: 0.5rem 2.5rem;
+  margin-left: 1rem;
+  border-radius: 22px;
+  cursor: pointer;
+
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+}
+
+.contenidoModificable .MuiFormLabel-root {
+  font-family: "Poppins" !important;
+}
+
+.contenidoModificable .MuiFormLabel-root.Mui-focused {
+  color: #71c6c6;
+}
+
+.contenidoModificable label + .MuiInput-formControl {
+  margin-top: 1rem;
+}
+
+.contenidoModificable .MuiInputBase-root {
+  font-family: "Poppins" !important;
+  color: rgb(49, 49, 49);
+  line-height: 1.6;
+}
+
+.contenidoModificable .MuiSelect-icon {
+  color: #71c6c6;
+}
+
+.contenidoModificable .MuiInput-underline:after {
+  border-bottom: 2px solid #71c6c6;
+}
+
+.contenidoModificable .MuiInput-underline:before {
+  border-bottom: 1px solid #71c6c6;
+}
+
+.contenidoModificable .MuiInput-underline:hover:not(.Mui-disabled):before {
+  border-bottom: 2px solid #71c6c6;
+}
+
+.contenidoModificable .MuiFormControl-root {
+  margin: 0.7rem 0rem;
+}
+
+.contenidoModificable .MuiPaper-rounded {
+  border-radius: 0px !important;
+}
+
+.contenidoModificable .MuiInputBase-input {
+  padding: 0.6rem 0;
+}
+
+.contenidoModificable .MuiAutocomplete-inputRoot[class*="MuiInput-root"] .MuiAutocomplete-input:first-child {
+  padding: 0.6rem 0;
+}
+
+.cajaForms {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.categoriasForm {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 1rem;
+}
+
+.categoriasForm .MuiFormControl-root {
+  width: 100%;
+}
+
+.categoriasForm .MuiAutocomplete-popupIndicator {
+  color: #71c6c6;
+}
+
+.categoriasForm .MuiAutocomplete-clearIndicator {
+  color: #71c6c6;
+}
+
+.tagsForm {
+  width: 48%;
+}
+
+.tagsForm .MuiChip-root {
+  border-radius: 0px;
+  color: white;
+  background-color: #92ef73;
+  font-size: 0.9rem;
+}
+
+.tagsForm .MuiChip-deleteIcon {
+  color: rgba(255, 255, 255, 0.685);
+}
+
+.tagsForm .MuiChip-deleteIcon:hover {
+  color: white;
+}
+
+.tagsForm .MuiFormControl-fullWidth {
+  width: 100%;
+}
+
+.tagsForm .MuiAutocomplete-popupIndicator {
+  color: #71c6c6;
+}
+
+.tagsForm .MuiAutocomplete-clearIndicator {
+  color: #23ada9;
+}
+
+.medicoLogeado {
+  color: rgba(0, 0, 0, 0.6);
+  padding-left: 0.5rem;
+}
+
+/* LISTAS */
+
+.cajaPortada {
+  width: 100%;
+}
+
+.cajaListas {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 2rem;
+  background-color: #f5f5f5;
+  min-height: 100vh;
+}
+
+.buscadorListas {
+  width: 70%;
+}
+
+.listas {
+  width: 100%;
+}
+
+.menuListas {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tabsListas {
+  width: 100%;
+}
+
+.nuevaLista {
+  width: auto;
+  min-width: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: white;
+  background-color: rgb(239, 46, 75);
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+}
+
+.nuevaLista span {
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 0.6rem 1rem 0.6rem 0rem;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.infoListas {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.infoAddLink {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.infoListasPrincipal {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.carpeta {
+  width: 7%;
+  color: #7b8585;
+  margin-top: 0.2rem;
+}
+
+.carpeta .svg-inline--fa {
+  font-size: 1.9em;
+}
+
+.medico-categoria {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.categoriaListas {
+  max-width: 100%;
+  width: 60%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.medicoListas {
+  width: 40%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  align-self: baseline;
+  font-weight: 300;
+}
+
+.carpeta .MuiSvgIcon-root {
+  font-size: 2.5rem;
+}
+
+.nuevaLista:hover {
+  background-color: rgb(245, 68, 91);
+}
+
+.orgInfoListas {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nEnlaces {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.6);
+  margin-bottom: 0.5rem;
+}
+
+.cajaIconosLista {
+  width: 20%;
+  display: flex;
+  justify-content: flex-end;
+  align-self: flex-start;
+}
+
+.icono {
+  margin: 0.5em;
+  font-size: large;
+  color: rgba(49, 49, 49, 0.534);
+
+  transform: scale(1.3);
+  transition: 0.7s;
+}
+
+.listElements {
+  display: flex;
+}
+
+.organizacion-sublistas {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.caja-enlacesLista {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.organizacion-enlacesLista {
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  align-content: flex-end;
+}
+
+.filaLista {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.cajaOptionLista {
+  width: 48.7%;
+  height: fit-content;
+  margin: 0.3rem 0.5rem;
+
+  display: flex;
+  justify-content: center;
+}
+
+.cajaOptionLista .MuiSvgIcon-root {
+  font-size: 1.5rem !important;
+}
+
+.cajaOptionLista .MuiSvgIcon-fontSizeSmall {
+  font-size: 1.25rem !important;
+}
+
+.cajaOptionLista .MuiAutocomplete-root {
+  width: 100%;
+}
+
+.cajaOptionLista .MuiInputBase-root {
+  color: white !important;
+}
+
+.cajaOptionLista .MuiFormLabel-root {
+  color: white !important;
+  font-family: "Poppins" !important;
+}
+
+.cajaOptionLista .MuiInputBase-root {
+  font-family: "Poppins" !important;
+}
+
+.cajaOptionLista .MuiOutlinedInput-notchedOutline {
+  border-color: #23ada9 !important;
+}
+
+.cajaOptionLista .MuiAutocomplete-input {
+  padding: 0.5rem 0.1rem !important;
+}
+
+.cajaOptionLista .MuiAutocomplete-inputRoot {
+  padding: 0.63rem !important;
+}
+
+.cajaOptionLista .MuiOutlinedInput-root:hover {
+  border-color: rgba(113, 198, 198, 0) !important;
+}
+
+.cajaOptionLista .MuiAutocomplete-popupIndicator {
+  margin-right: 0 !important;
+  margin-left: 0.5rem !important;
+}
+
+.cajaOptionLista .MuiButtonBase-root {
+  background-color: white !important;
+}
+
+.cajaOptionLista .MuiButtonBase-root:hover {
+  background-color: #71c6c6 !important;
+}
+
+.cajaOptionLista .MuiIconButton-root {
+  color: #23ada9 !important;
+}
+
+.cajaOptionLista .MuiIconButton-root:hover {
+  background-color: #71c6c6 !important;
+}
+
+.listas .MuiPaper-root {
+  background-color: transparent !important;
+}
+
+.listas .MuiPaper-elevation1 {
+  box-shadow: none;
+}
+
+.listas .MuiTypography-body1 {
+  background-color: white !important;
+}
+
+.listas .MuiTab-textColorPrimary.Mui-selected {
+  font-weight: 600;
+  color: rgb(61, 61, 61);
+}
+
+.listas .MuiTab-wrapper {
+  font-size: 1.1rem;
+}
+
+.listas .MuiTab-root {
+  text-transform: none;
+  min-width: 20%;
+}
+
+.abrirListas .MuiDialog-paperWidthSm {
+  width: 100%;
+  max-width: 750px;
+}
+
+.abrirListas .MuiDialogActions-root {
+  justify-content: center;
+}
+
+.abrirListas .MuiDialogTitle-root {
+  display: flex;
+  justify-content: center;
+}
+
+.MuiButton-textPrimary.cerrarListas {
+  color: rgba(0, 0, 0, 0.7);
+  margin-bottom: 0.7rem;
+  font-weight: 600;
+}
+.abrirListas .MuiTypography-colorTextSecondary {
+  color: rgba(0, 0, 0, 0.9);
+}
+
+.WithStyles\(ForwardRef\(DialogContent\)\)-root-814 {
+  padding: auto;
+}
+
+/* EDITAR LISTA */
+.listaAltaEditar {
+  background-color: #f5f5f5;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Internacionalización */
+
+.tituloIdioma {
+  width: 100%;
+}
+
+.tituloIdioma .MuiFormControl-root {
+  min-width: 100%;
+}
+.otrosIdioma {
+  width: 100%;
+  padding-top: 0.3rem;
+}
+
+.otrosIdioma .MuiFormControl-root {
+  min-width: 100%;
+}
+
+.plusIdioma {
+  display: flex;
+  justify-content: flex-end;
+  color: #23ada9;
+}
+
+.idiomaIncluido {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.textosIdioma {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+}
+
+.tipoIdioma {
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1.5rem;
+  margin-top: 0.2rem;
+
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  background: #e6e6e6;
+  color: #6b6b6b;
+  cursor: pointer;
+}
+
+.tipoIdiomaSelected {
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1.5rem;
+  margin-top: 0.2rem;
+
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  background: #71c6c6;
+  color: white;
+  cursor: pointer;
+}
+
+.idiomaIncluido .MuiFormLabel-root {
+  font-family: "Poppins" !important;
+}
+
+.noResultado {
+  width: 95%;
+  display: flex;
+  justify-content: center;
+  margin: 2rem 1.5rem;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.noResultadoPop {
+  width: 95%;
+  display: flex;
+  justify-content: center;
+  margin: 0rem 1.5rem 1rem 1.5rem;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+/* USUARIOS */
+
+.infoUsuarios {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.infoUsuario {
+  width: 85%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cajaUsuarioInfo {
+  width: 88%;
+  display: flex;
+}
+
+.identidadUsuario {
+  width: 50%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.nombreUsuario {
+  width: 30%;
+}
+
+.apellidoUsuario {
+  width: 70%;
+  margin-left: 1rem;
+}
+
+.featUsuario {
+  width: 55%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.emailUsuario {
+  width: 70%;
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 0.5rem;
+}
+
+.rolUsuario {
+  width: 30%;
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 0.5rem;
+}
+
+.iconosUsuario {
+  width: 12%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.dividerUsuario {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.dividerUsuario .MuiDivider-inset {
+  margin-left: 0px;
+  width: 90%;
+}
+
+.usuarios {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #f5f5f5;
+  margin-top: 0.5rem;
+}
+
+.cajaUsuarios {
+  width: 100%;
+  background-color: white;
+}
+
+.avanzadaUsuarios {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.cajaOptionUsuarios {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #71c6c6;
+  padding-top: 0.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.checkboxRol {
+  width: auto;
+  color: white;
+  background-color: #23ada9;
+  padding: 0.3rem 3rem 0.3rem 4rem;
+}
+
+.optionRol .MuiFormControlLabel-labelPlacementStart {
+  margin-left: 0px;
+}
+
+.checkboxRol .MuiTypography-body1 {
+  margin-right: 0.5rem;
+}
+
+.checkboxRol .MuiCheckbox-colorSecondary.Mui-checked {
+  color: white;
+}
+
+.checkboxRol .MuiIconButton-colorSecondary {
+  color: white;
+}
+
+.nuevoUsuario {
+  width: auto;
+  min-width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: white;
+  background-color: rgb(239, 46, 75);
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+  margin-bottom: 0.5rem;
+}
+.nuevoUsuario span {
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 1rem 1rem;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+.nuevoUsuario:hover {
+  background-color: rgb(245, 68, 91);
+}
+
+.nuevoUsuario .svg-inline--fa {
+  margin-left: 1rem;
+}
+
+.optionRol {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2.5rem;
+}
+
+.roles {
+  width: 82%;
+  margin-bottom: 1rem;
+}
+
+.linea div {
+  border-bottom: solid 1px grey;
+  width: 100%;
+  height: 50px;
+}
+
+.filtrarRol .roles {
+  color: white;
+  font-size: 1.1rem;
+}
+
+.filtrarRol {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.editarUsuario {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: rgb(49, 49, 49);
+}
+
+.cajaContenidoUsuario {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.tabsContenidoUsuario {
+  width: 70%;
+}
+
+.cajaBotonesEditar {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.cajaContenidoUsuario .MuiTab-wrapper {
+  font-size: 1.1rem;
+}
+
+.cajaContenidoUsuario .MuiTab-textColorPrimary.Mui-selected {
+  font-weight: 600;
+  color: rgb(61, 61, 61);
+}
+
+.cajaContenidoUsuario .MuiTab-root {
+  text-transform: none;
+  min-width: 20%;
+}
+
+.paginacion {
+  display: flex;
+  justify-content: center;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.MuiPagination-ul {
+  justify-content: center;
+}
+
+.cajaListaEnlaces li {
+  height: auto;
+}
+
+.noResultadoUsuario {
+  width: 95%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.cajaElementoCreado {
+  display: block;
+  position: fixed;
+  top: 15vh;
+  z-index: 4;
+  background-color: #f1f1f1;
+  transition: ease-out 0.2s;
+}
+
+.elementoCreado {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem 5rem 3rem 5rem;
+  background-color: transparent;
+  color: #6b6b6b;
+}
+
+.checkCreado {
+  width: 5rem;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  border-radius: 50%;
+  background-color: transparent;
+  color: #6b6b6b;
+  border: solid 3px white;
+}
+
+.checkCreado .MuiSvgIcon-root {
+  font-size: 2.5rem;
+}
+
+.infoCreado {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+.listoCreado {
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin-bottom: 0.2rem;
+}
+
+.cerrarInfo {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  padding-top: 1rem;
+  padding-right: 1rem;
+  color: #6b6b6b;
+  cursor: pointer;
+}
+
+.cerrarInfo .MuiSvgIcon-root {
+  transition: ease-out 0.2s;
+}
+
+.cerrarInfo .MuiSvgIcon-root:hover {
+  background-color: #6b6b6b;
+  fill: white;
+}
+
+.cajaInfoError {
+  display: block;
+  position: fixed;
+  top: 15vh;
+  z-index: 4;
+  background-color: #ef2e4a;
+  transition: ease-out 0.2s;
+}
+
+.cerrarError {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  padding-top: 1rem;
+  padding-right: 1rem;
+  color: white;
+  cursor: pointer;
+}
+
+.errorGuardar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0rem 4rem 2rem 4rem;
+  color: white;
+}
+
+.errorGuardar .MuiSvgIcon-root {
+  font-size: 2rem;
+}
+
+.infoErrorGuardar {
+  text-align: center;
+  margin-left: 0.5rem;
+  color: white;
+}
+
+.actualizarPass span {
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: center;
+  background-color: transparent !important;
+  color: #71c6c6;
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.MuiFilledInput-root {
+  background-color: transparent !important;
+}
+
+.modalError .MuiAlert-filledError {
+  background-color: #ef2e4a;
+}
+
+/* Footer */
+
+.PiePagina {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 2rem;
+  background-color: rgba(255, 255, 255, 0.904);
+}
+
+.PiePaginaLogin {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.904);
+  margin-top: -79px;
+}
+.footer1 {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 2rem;
+}
+
+.footer1 h3 {
+  color: #6b6b6b;
+  padding-top: 0.3rem;
+  font-weight: 400;
+  font-size: 1.1rem;
+}
+
+.footer2 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-size: 0.9rem;
+  padding-top: 1.2rem;
+  background-color: #23ada9;
+  color: white;
+  padding-bottom: 1.2rem;
+}
+
+.footer2Login {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-size: 0.9rem;
+  padding-top: 1.2rem;
+  background-color: #23ada9;
+  color: white;
+  padding-bottom: 1.2rem;
+}
+
+.cajaFooter2Login {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.cajaFooter2 {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.infoFooter {
+  width: 70%;
+  display: flex;
+}
+
+.infoFooter span {
+  margin-right: 2rem;
+  cursor: pointer;
+}
+
+.infoFooter span:hover {
+  color: #c0f7f7;
+}
+
+.infoFooterLogin {
+  width: 70%;
+  display: flex;
+  padding-top: 10px;
+}
+
+.infoFooterLogin span {
+  margin-right: 2rem;
+  cursor: pointer;
+}
+
+.infoFooterLogin span:hover {
+  color: #c0f7f7;
+}
+
+.copyright .MuiTypography-body1 {
+  font-size: 0.9rem;
+  color: #c0f7f7;
+}
+
+.copyright .MuiTypography-colorTextSecondary {
+  color: #c0f7f7;
+}
+
+.cajaAbout {
+  width: 100%;
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #f5f5f5;
+}
+
+.about {
+  width: 70%;
+  padding: 2rem 4rem;
+  background-color: white;
+}
+
+.about h1 {
+  padding-bottom: 1rem;
+}
+
+.about p {
+  width: 60%;
+  text-align: justify;
+}
+
+/* RESPONSIVE */
+
+@media only screen and (max-width: 1886px) {
+  .botonEntrar button {
+    width: 40%;
+  }
+
+  .caja-navBar {
+    width: 72%;
+  }
+  .organizacionPrincipal {
+    width: 72%;
+  }
+
+  .buscadorListas {
+    width: 72%;
+  }
+
+  .cajaModificarEnlace {
+    width: 72%;
+  }
+  .tabsContenidoUsuario {
+    width: 72%;
+  }
+  .logoLogin {
+    width: 11rem;
+  }
+  .cajaOptionLista {
+    width: 48.7%;
+  }
+
+  .about {
+    width: 72%;
+  }
+}
+
+@media only screen and (max-width: 1710px) {
+  .botonEntrar button {
+    width: 45%;
+  }
+
+  .caja-navBar {
+    width: 82%;
+  }
+  .organizacionPrincipal {
+    width: 82%;
+  }
+  .buscadorListas {
+    width: 82%;
+  }
+  .portada {
+    height: 16rem;
+  }
+  .cajaModificarEnlace {
+    width: 82%;
+  }
+  .tabsContenidoUsuario {
+    width: 82%;
+  }
+  .logoLogin {
+    width: 10rem;
+  }
+  .cajaOptionLista {
+    width: 48.3%;
+  }
+  .guardarEnlaceLista {
+    padding: 0.4rem 1.5rem;
+  }
+  .confirmacionNo {
+    padding: 0.4rem 1.5rem;
+  }
+  .confirmacionEliminar {
+    padding: 0.4rem 2rem;
+  }
+  .about {
+    width: 82%;
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .botonEntrar button {
+    width: 65%;
+  }
+
+  .organizacionPrincipal {
+    width: 95%;
+  }
+
+  .buscadorListas {
+    width: 95%;
+  }
+  .caja-navBar {
+    width: 95%;
+  }
+
+  .portada {
+    height: 14rem;
+  }
+
+  .menu .cajaLogo {
+    width: 19%;
+    padding-left: 1rem;
+  }
+
+  .menu .cajaTabs {
+    width: 60%;
+    padding-right: 2rem;
+    text-align: right;
+  }
+
+  .menu .navBar li {
+    padding: 0.5rem 1.3rem;
+  }
+
+  .menu .cajaLogout {
+    width: 28%;
+  }
+
+  .cajaModificarEnlace {
+    width: 90%;
+  }
+
+  .cajaIcono {
+    width: 30%;
+  }
+
+  .infoEnlace {
+    width: 68%;
+  }
+
+  .tabsContenidoUsuario {
+    width: 90%;
+  }
+
+  .contenidoModificable {
+    margin-bottom: 2rem;
+  }
+
+  .cajaMedicoGuardar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nombreMedico {
+    margin-bottom: 1rem;
+  }
+
+  .botonesEditar {
+    width: 100%;
+  }
+
+  .about {
+    width: 95%;
+  }
+
+  .about p {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 1110px) {
+  .botonEntrar button {
+    width: 81%;
+  }
+
+  .nuevoEnlace {
+    display: flex;
+  }
+
+  .columnaDestacados {
+    display: none;
+  }
+
+  .organizacionSecundaria {
+    width: 100%;
+  }
+
+  .portada {
+    height: 12rem;
+  }
+
+  .menu .cajaLogo {
+    width: 20%;
+  }
+
+  .menu .cajaTabs {
+    width: 70%;
+    padding-right: 1rem;
+  }
+
+  .menu .cajaLogout {
+    width: 22%;
+  }
+
+  .cajaModificarEnlace {
+    width: 95%;
+  }
+
+  .cajaUsuarioInfo {
+    flex-direction: column;
+  }
+
+  .identidadUsuario {
+    width: 100%;
+  }
+
+  .featUsuario {
+    width: 100%;
+  }
+
+  .emailUsuario {
+    margin-left: 0rem;
+  }
+
+  .checkboxRol {
+    padding: 0.3rem 1.8rem 0.3rem 2.5rem;
+  }
+
+  .footer1 {
+    flex-direction: column;
+  }
+
+  .tabsContenidoUsuario {
+    width: 95%;
+  }
+
+  .about p {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .menu .cajaLogo {
+    width: 18%;
+  }
+
+  .menu .cajaTabs {
+    width: 82%;
+    padding-right: 0rem;
+  }
+
+  .checkboxRol {
+    padding: 0.3rem 0.7rem 0.3rem 1.5rem;
+  }
+
+  .infoFooter {
+    width: 40%;
+    flex-direction: column;
+  }
+
+  .infoFooter span {
+    margin-right: 0rem;
+    margin-bottom: 1rem;
+  }
+
+  .about p {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .logoResponsive {
+    display: block;
+  }
+
+  .menuResponsive {
+    position: fixed;
+  }
+
+  .botonEntrar button {
+    width: 100%;
+    padding: 0.5rem 2rem;
+  }
+
+  .cajaPortada {
+    display: none;
+  }
+
+  .buscar {
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    font-size: 1rem;
+  }
+
+  .busquedaSimple {
+    margin-top: 2.8rem;
+  }
+
+  .busquedaAvanzada {
+    margin-bottom: 0.3rem;
+    margin-top: 0.3rem;
+  }
+
+  .search-container .MuiSvgIcon-root {
+    font-size: 2.3rem !important;
+  }
+
+  .lupa {
+    top: 1rem;
+  }
+
+  #joinLink {
+    font-size: 1.1rem !important;
+  }
+
+  .CTAvanzado {
+    width: 95%;
+    padding-top: 0.7rem;
+    padding-bottom: 0.6rem;
+  }
+
+  .nuevoUsuario span {
+    padding: 0.7rem 1rem 0.6rem 1rem;
+  }
+
+  .nuevoEnlace span {
+    padding-top: 0.7rem;
+    padding-bottom: 0.6rem;
+  }
+
+  .cajaDesplegada {
+    padding-top: 0.3rem;
+  }
+
+  .fila {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .cajaOption {
+    width: 100%;
+    margin: 0.3rem 0.3rem;
+  }
+
+  .cajaOption .MuiAutocomplete-inputRoot {
+    padding: 0.4rem !important;
+  }
+
+  .cajaTags {
+    margin: 0.3rem 0.3rem 0rem 0.3rem;
+  }
+
+  .cajaTags .MuiAutocomplete-inputRoot[class*="MuiOutlinedInput-root"] {
+    padding: 0.4rem;
+  }
+  .botonEliminar {
+    padding: 0.5rem 2rem;
+  }
+
+  .cajaLista .MuiListItemAvatar-root {
+    display: none;
+  }
+
+  .cajaLista .MuiListItem-root {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .cajaListaEnlaces .MuiListItemAvatar-root {
+    display: none;
+  }
+
+  .infoEnlace {
+    width: 85%;
+  }
+
+  .cajaIcono {
+    width: 15%;
+  }
+
+  .enlacesAltaEditar {
+    width: 100%;
+    height: auto;
+    background-image: none;
+  }
+
+  .cajaForms {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .categoriasForm {
+    width: 100%;
+  }
+
+  .tagsForm {
+    width: 100%;
+  }
+
+  .cajaMedicoGuardar {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: flex-start;
+  }
+
+  .contenidoModificable {
+    margin-bottom: 1.5rem;
+  }
+
+  .nombreMedico {
+    margin-bottom: 1.5rem;
+  }
+
+  .botonesEditar {
+    width: 100%;
+    justify-content: flex-end;
+    align-content: center;
+  }
+
+  .botonVolver {
+    margin-right: 0.5rem;
+    padding: 0.5rem 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  .botonModificar {
+    margin-left: 0.5rem;
+    padding: 0.5rem 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  .menuPublic {
+    height: 2.5rem;
+  }
+
+  .caja-navBar {
+    font-size: 1rem;
+  }
+
+  .logout {
+    font-size: 1.7rem !important;
+  }
+
+  .CTAvanzado h2 {
+    font-size: 1rem;
+  }
+
+  .nuevoUsuario span {
+    font-size: 1rem;
+  }
+
+  .infoEnlacePublico {
+    width: 100%;
+  }
+
+  .cajaLista .titleName {
+    font-size: 1rem;
+    width: 100%;
+  }
+
+  .cajaListaEnlaces .titleName {
+    font-size: 1rem;
+    width: 85%;
+  }
+
+  .nameCategoria {
+    padding: 0.3rem 0.6rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .nameTag {
+    padding: 0.3rem 0.6rem;
+    margin-right: 0.4rem;
+  }
+
+  .iconos .MuiSvgIcon-root {
+    font-size: 1.3rem;
+  }
+
+  .cajaPuntuacion {
+    width: 100%;
+    align-self: flex-start;
+    align-items: flex-start;
+  }
+
+  .puntua {
+    padding: 0.2rem 2.5rem;
+  }
+
+  .cajaPuntuacion .MuiRating-root {
+    font-size: 1.2rem !important;
+  }
+
+  .heart {
+    padding: 0.07rem !important;
+  }
+
+  .MuiRating-decimal {
+    padding: 0.07rem !important;
+  }
+
+  .favorito {
+    display: none;
+    font-size: 1rem !important;
+  }
+
+  .nuevaLista {
+    min-width: 50%;
+  }
+
+  .dialogoEliminar .MuiDialogActions-root {
+    flex-direction: column-reverse;
+    align-items: stretch;
+    width: 80%;
+  }
+
+  .abrirListas .MuiDialogActions-root {
+    flex-direction: column-reverse;
+    align-items: stretch;
+    margin: 0rem 2rem;
+  }
+
+  .botonesPuntuar.MuiDialogActions-root {
+    flex-direction: column-reverse;
+    align-items: stretch;
+    margin: 0rem 1rem;
+  }
+
+  .corazonesPuntuar.MuiDialogContent-root {
+    padding: 1rem 0rem 0rem 0rem;
+  }
+
+  .botonesPuntuar.MuiDialogActions-spacing > :not(:first-child) {
+    margin-left: 0;
+  }
+
+  .MuiDialogActions-spacing > :not(:first-child) {
+    margin-left: 0;
+  }
+
+  .popupEliminar .MuiDialogActions-spacing > :not(:first-child) {
+    margin-left: 0rem;
+  }
+
+  .guardarEnlaceLista {
+    padding: 0.2rem 1.5rem;
+  }
+
+  .confirmacionNo {
+    padding: 0.2rem 1.5rem;
+  }
+
+  .confirmacionEliminar {
+    padding: 0.2rem 1.5rem;
+  }
+
+  .enviarRating {
+    padding: 0.2rem 1.5rem;
+  }
+
+  .popupListas {
+    margin: 0;
+  }
+
+  .popupListas .categoriaListas {
+    display: none;
+  }
+
+  .menuListas {
+    flex-direction: column-reverse;
+  }
+
+  .listas .MuiListItem-gutters {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .identidadUsuario {
+    flex-direction: column;
+  }
+
+  .nombreUsuario {
+    width: 100%;
+  }
+
+  .apellidoUsuario {
+    width: 100%;
+    margin-left: 0rem;
+  }
+
+  .featUsuario {
+    flex-direction: column;
+  }
+
+  .emailUsuario {
+    width: 100%;
+  }
+
+  .rolUsuario {
+    width: 100%;
+    margin-left: 0rem;
+  }
+
+  .cajaTagsPublic {
+    width: 100%;
+    margin: 0.3rem 0.3rem;
+  }
+
+  .cajaTagsPublic .tagsBusqueda {
+    margin-bottom: 0;
+  }
+
+  .cajaBuscarAvanzado {
+    margin-top: 0.7rem;
+  }
+
+  .cajaOptionLista {
+    width: 100%;
+    margin: 0.3rem 0rem 0rem 0rem;
+  }
+
+  .cajaOptionLista .MuiAutocomplete-input {
+    padding: 0.3rem 0.1rem !important;
+  }
+
+  .checkboxRol {
+    padding: 0rem 3rem 0rem 4rem;
+  }
+
+  .optionRol {
+    flex-direction: column;
+    align-items: normal;
+    margin-bottom: 0.5rem;
+  }
+
+  .optionRol .MuiFormControlLabel-labelPlacementStart {
+    margin-bottom: 0.3rem;
+    margin-top: 0.3rem;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .cajaFooter2 {
+    flex-direction: column;
+  }
+
+  .copyright {
+    margin-top: 1rem;
+  }
+
+  .footer1 h3 {
+    font-size: 1rem;
+  }
+
+  .about h1 {
+    font-size: 1.8rem;
+  }
+
+  .contacto {
+    padding: 1rem 1rem;
+  }
+}
